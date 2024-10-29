@@ -1,0 +1,246 @@
+/* general styles   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+/* Navigation bar styles */
+.navigationBar {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.user {
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+/* Sidebar styles */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #023860;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  background-color: #023860;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+.logoText {
+  text-decoration: none;
+  color: #fff;
+}
+.logoText:visited {
+  color: #fff;
+}
+
+.sidebarLinks {
+  list-style: none;
+  font-size: 1em;
+}
+
+.sidebar li {
+  list-style: none;
+}
+
+.sidebarLinks li a {
+  display: block;
+  padding: 15px 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebarLinks li a:hover {
+  background-color: #035d9a;
+}
+
+.submenu {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.dropdown:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 300px;
+  width: 85%;
+  margin-left: auto;
+  font-size: 1rem;
+}
+.mainLink i {
+  padding-right: 5px;
+  font-size: 1.1em;
+}
+.active {
+  background-color: #035d9a;
+}
+
+/* Main content styles */
+.mainContent {
+  margin: 0 0 0 210px;
+  padding: 20px;
+}
+.summaryCards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 150px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 20px;
+}
+.card h3 {
+  grid-column: span 2;
+  font-size: 1.2rem;
+}
+.card p {
+  font-size: 1.3rem;
+}
+.card i {
+  font-size: 2rem;
+  color: #023860;
+  text-align: right;
+}
+
+/* Feedback Section styles */
+.success {
+  background-color: #2bc117;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  animation: slideDown 0.5s ease-in-out forwards,
+    slideUp 0.5s ease-in-out 3s forwards;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    top: -50px;
+  }
+  to {
+    opacity: 1;
+    top: 30px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    top: 30px;
+  }
+  to {
+    opacity: 0;
+    top: -50px;
+    display: none;
+  }
+}
+
+/* form group Styles */
+.marginTopFormGroup {
+  margin-top: 40px;
+}
+.form-group h2 {
+  margin-bottom: 10px;
+  color: #023860;
+}
+
+/* Table div styles */
+.tableDiv {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  height: 600px;
+  overflow: auto;
+}
+
+.tableDiv table {
+  width: 100%;
+}
+.tableDiv th {
+  font-size: 1.1rem;
+}
+/* Action Buttons styles  */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.action-buttons a {
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-buttons a.approve {
+  background-color: #4caf50;
+}
+
+.approve {
+  background-color: #4caf50;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+}
+
+.action-buttons a.approve,
+.approve:hover {
+  background-color: #45a049;
+  transform: scale(1.02);
+}
+
+.action-buttons a.reject {
+  background-color: #f44336;
+}
+
+.action-buttons a.reject:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}

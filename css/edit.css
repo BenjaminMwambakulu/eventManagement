@@ -1,0 +1,57 @@
+form {
+  padding: 20px;
+  width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea,
+input[type="time"],
+input[type="number"],
+input[type="tel"],
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  border: none;
+  background-color: rgb(215, 215, 215);
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+textarea {
+  height: 123px;
+}
+
+input[type="submit"] {
+  margin-top: 15px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.addUser {
+  margin-top: 15px;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
