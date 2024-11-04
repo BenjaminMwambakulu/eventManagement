@@ -239,6 +239,11 @@ footer {
   padding: 10px;
 }
 
+footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .footer-links li {
   margin-bottom: 5px;
   list-style: none;
